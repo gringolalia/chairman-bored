@@ -8,19 +8,24 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s | Board',
-    title: 'Board',
+    titleTemplate: '%s | Planet Blexar',
+    title: 'Chairman of the Board Room',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Board admin panel' }
+      { hid: 'description', name: 'description', content: 'A Board game based mission control gizmo' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Heebo:400,500,700|Markazi+Text:400,600,700'
+          'https://fonts.googleapis.com/css?family=News+Cycle|Material+Icons'
+        },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
       }
     ]
   },
@@ -28,7 +33,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#6699cc' },
 
   /*
   ** Global CSS

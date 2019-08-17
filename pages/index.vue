@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  h1 Dashboard
+  h1 Painel de Controle
   .grid.has-space
     .column.is-widescreen-4.is-tablet-6
       AppCard.is-full.is-fit-body.is-light

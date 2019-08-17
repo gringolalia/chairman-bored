@@ -168,41 +168,41 @@ spacing(base, numSizes)
  * https://github.com/ardentic/stylus-mq
  */
 $mq-base-font-size ?= 16px
-// 
+//
 // Allows you to create a separate stylesheet for older browsers that
 // don't support media queries.
-// 
+//
 $mq-responsive ?= true
-// 
+//
 // Default named breakpoints.
-// 
+//
 $mq-breakpoints ?= {
   tiny: 480px,
   small: 768px,
   medium: 992px,
   large: 1200px
 }
-// 
+//
 // Static breakpoint to use when $mq-responsive is set to false.
-// 
+//
 $mq-static-breakpoint ?= 'desktop'
-// 
+//
 // List of breakpoints to show in the top right corner of the browser.
-// 
+//
 $mq-show-breakpoints ?= ()
 
-// 
+//
 // Convert pixels to ems
-// 
+//
 mq-px2em($value)
   if (unit($value) == 'em')
     return $value
 
   return unit(($value / $mq-base-font-size), 'em')
 
-// 
+//
 // Get named breakpoint width
-// 
+//
 mq-get-breakpoint-width($name)
   unless ($name in $mq-breakpoints)
     warn('Breakpoint ' + $name + ' does not exist')
@@ -251,17 +251,17 @@ mq($from = false, $until = false, $and = false, $media-type = 'all')
     @media $media-query
       {block}
 
-// 
+//
 // Add a breakpoint
-// 
+//
 mq-add-breakpoint($name, $width)
   $new-breakpoint = {}
   $new-breakpoint[$name] = $width
   return merge($mq-breakpoints, $new-breakpoint)
 
-// 
+//
 // Output breakpoints as json
-// 
+//
 mq-breakpoints-to-json()
   $json = ()
 
@@ -273,16 +273,16 @@ mq-breakpoints-to-json()
 
   return '{ ' + join(', ', $json) + ' }'
 
-// 
+//
 // Show the active breakpoint in the top right corner of the viewport
-// 
+//
 if ($mq-show-breakpoints)
   body:before
     background-color: #fcf8e3
     border-bottom: 1px solid #fbeed5
     border-left: 1px solid #fbeed5
     color: #c09853
-    font-family: 'Helvetica Neue', sans-serif
+    font-family: 'News Cycle', 'Helvetica Neue', sans-serif
     font-size: 12px
     padding: 3px 6px
     position: absolute

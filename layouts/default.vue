@@ -19,6 +19,28 @@
 @import '~@blexar/framework/blexar.styl'
 @import '~assets/css/app.styl'
 
+*:not(i, code), body, html {
+  font-family: 'News Cycle', sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  margin: 0x;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'News Cycle', sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+.material-icons, .fa, .fab, .far, .fas {
+  vertical-align: middle;
+}
+
+.dignity {
+  font-family: 'News Cycle', sans-serif;
+}
+
+
 .TheApp
   min-height: 100vh
   overflow: hidden

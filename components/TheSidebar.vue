@@ -28,7 +28,7 @@
   display: block
   position: fixed
   z-index: 1060
-  top: 50px
+  top: 75px
   {$dir-start}: 0
   bottom: 0
   width: 260px
@@ -68,7 +68,7 @@
     padding-{$dir-start}: 25px
 
     +mq($until: 'desktop')
-      top: 50px
+      top: 75px
 
     &::-webkit-scrollbar
       width: 0.5em
@@ -77,7 +77,7 @@
       -webkit-box-shadow: none
 
     &::-webkit-scrollbar-thumb
-      background-color: $light
+      background-color: $white
       outline: 0 solid $slategray
 
 .sidebar-open

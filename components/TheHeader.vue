@@ -1,24 +1,28 @@
 <template lang="pug">
 .TheHeader
-  .TheHeader-logo
-    nuxt-link(to="/"): AppIcon(name="logo")
+  .TheHeader-logo(style="font-size: 20px")
+    nuxt-link(to="/")
+      i.fas.fa-cogs.fa-2x
+      | &nbsp; Bugiganga Surunganga
 
 
   ul.TheHeader-actions
     li.TheHeader-icon
-      a(href="https://github.com/baianat/board" target="blank"): AppIcon(name="github")
+      a(href="https://github.com/baianat/board" target="blank"): AppIcon(name="layers")
     li
       AppDropdown.is-large.is-right
-        AppIcon(name="notifications" slot="trigger" type="outlined")
+        AppIcon(name="local-cafe" slot="trigger" type="outlined")
         AppList(:items="notificationIcons")
         button.button.is-tiny.is-dark.is-wide.u-mt-small View all
     li
-      AppDropdown.is-right
-        figure.avatar.is-tiny(slot="trigger" )
-          img(src='https://randomuser.me/api/portraits/men/81.jpg', alt='avatar')
-        a.dropdown-item(href='#0') Profile
-        a.dropdown-item(href='#0') Messages
-        a.dropdown-item(href='#0') Logout
+      AppDropdown.is-large.is-right
+        //- figure.avatar.is-tiny(slot="trigger" )
+        //-   i.fas.fa-sun.fa-2x
+        AppIcon(name="headset" slot="trigger" type="outlined")
+        a.dropdown-item(href='#0') Biografia
+        a.dropdown-item(href='#0') Currículo
+        a.dropdown-item(href='#0') Coordenados
+        a.dropdown-item(href='#0') Antepassados
 
     li.TheHeader-icon.is-sidebar(@click.prevent="$emit('sidebar')")
       AppIcon(name="menu")
@@ -28,10 +32,11 @@
 .TheHeader
   background: $primary
   color: $white
-  height: 50px
+  height: 75px
   display: flex
   justify-content: space-between
   align-items: center
+  vertical-align: middle
   padding: 0 40px
   position: fixed
   z-index: 1050
